@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <button id="greetings" onclick = "displaygreetings()">ButtonClick</button>
+
+    <button id ="btngreetings"> click to see the current date</button>
+        <p id="example"></p>
+
+
+    <h1 class="presidents">Popuplar presidents in Africa</h1>
+    <ul class="africa">
+        <li>Suluhu</li>
+        <li>Museveni</li>
+        <li>Ruto</li>
+        <li>kagame</li>
+    </ul>
+    <h1>web programming languages</h1>
+
+    <script type="text/javascript"> 
+
+    const now = document.getElementById("btngreetings");
+    now.addEventListener("click", disp())
+     function disp(){
+        alert("welcome home")
+     }
+
+
+        let LanguageList = document.createElement("ul");
+        document.body.appendChild(LanguageList);
+
+        let ListItem1 = document.createElement("li")
+        ListItem1.textContent = "HTML"
+        LanguageList.appendChild(ListItem1)
+
+        let ListItem2 = document.createElement("li")
+        ListItem2.textContent = "CSS"
+        LanguageList.appendChild(ListItem2)
+
+        const h1selector =  document.querySelector("h1");
+        h1selector.style.color = "blue"
+
+
+        let ListItem3 = document.createElement("li")
+        ListItem3.textContent = "Javascript"
+        LanguageList.appendChild(ListItem3)
+
+        function displaygreetings(){
+            alert("It Finnaly worked");
+        };
+        document.getElementById("btngreetings").addEventListener("click", displaydate);
+        function displaydate(){
+           document.getElementById("example").innerHTML=Date();
+
+        };
+
+       const hom =  document.querySelectorAll("ul>li");
+       console.log("hom");
+
+    </script>
+</body>
+</html>
